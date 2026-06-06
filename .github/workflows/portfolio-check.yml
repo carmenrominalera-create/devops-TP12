@@ -9,17 +9,15 @@ jobs:
 validate:
 runs-on: ubuntu-latest
 
-```
 steps:
-  - name: Checkout
+  - name: Checkout repository
     uses: actions/checkout@v4
 
-  - name: Verificar README
+  - name: Verify README
     run: test -f README.md
 
-  - name: Verificar perfil
+  - name: Verify documentos folder
     run: test -f documentos/perfil-readme.md
 
-  - name: Verificar entrevista
-    run: ls guiones/
-```
+  - name: Verify guiones folder
+    run: ls guiones
