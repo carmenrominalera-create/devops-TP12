@@ -1,0 +1,26 @@
+name: Portfolio Health Check
+
+on:
+push:
+branches:
+- main
+
+workflow_dispatch:
+
+jobs:
+validate:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Checkout
+    uses: actions/checkout@v4
+
+  - name: Verificar README
+    run: |
+      test -f README.md
+
+  - name: Mostrar contenido
+    run: |
+      echo "Portfolio validado correctamente"
+```
