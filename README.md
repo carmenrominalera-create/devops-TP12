@@ -78,3 +78,4 @@ Durante los 12 trabajos prácticos se construyó una aplicación completa utiliz
 
 Se trabajó con contenedores, integración continua, monitoreo, Kubernetes, Helm y Terraform, integrando todos los conocimientos adquiridos en una solución funcional desplegable y reproducible.
 
+Actualización de verificación workflow.
