@@ -5,8 +5,6 @@ push:
 branches:
 - main
 
-workflow_dispatch:
-
 jobs:
 validate:
 runs-on: ubuntu-latest
@@ -17,10 +15,11 @@ steps:
     uses: actions/checkout@v4
 
   - name: Verificar README
-    run: |
-      test -f README.md
+    run: test -f README.md
 
-  - name: Mostrar contenido
-    run: |
-      echo "Portfolio validado correctamente"
+  - name: Verificar perfil
+    run: test -f documentos/perfil-readme.md
+
+  - name: Verificar entrevista
+    run: ls guiones/
 ```
