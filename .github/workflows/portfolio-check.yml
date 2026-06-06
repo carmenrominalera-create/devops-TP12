@@ -1,23 +1,23 @@
 name: Portfolio Health Check
 
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      - main
 
 jobs:
-validate:
-runs-on: ubuntu-latest
+  validate:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
 
-  - name: Verify README
-    run: test -f README.md
+        - name: Verify README
+          run: test -f README.md
 
-  - name: Verify profile document
-    run: test -f docs/profile-readme.md
+        - name: Verify profile document
+          run: test -f docs/profile-readme.md
 
-  - name: Verify scripts folder
-    run: ls scripts
+        - name: Verify scripts folder
+          run: ls scripts
